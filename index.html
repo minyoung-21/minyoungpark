@@ -7,23 +7,23 @@
     <style>
         :root {
             --primary: #2563eb;
-            --dark: #1e293b;
-            --light-bg: #f8fafc;
-            --text: #334155;
-            --accent: #64748b;
+            --dark: #0f172a;
+            --secondary: #64748b;
+            --bg: #f8fafc;
+            --card: #ffffff;
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
             line-height: 1.6;
             margin: 0;
-            color: var(--text);
-            background-color: var(--light-bg);
+            color: #334155;
+            background-color: var(--bg);
         }
 
         header {
-            background: white;
-            padding: 4rem 1rem 3rem;
+            background: var(--card);
+            padding: 4rem 1rem 2rem;
             text-align: center;
             border-bottom: 1px solid #e2e8f0;
         }
@@ -38,49 +38,41 @@
             margin-bottom: 1.5rem;
         }
 
-        h1 { margin: 0; color: var(--dark); font-size: 2.2rem; letter-spacing: -0.025em; }
-        .subtitle { color: var(--primary); font-weight: 600; margin-top: 0.5rem; font-size: 1.1rem; }
+        h1 { margin: 0; color: var(--dark); font-size: 2.2rem; }
+        .subtitle { color: var(--primary); font-weight: 600; margin-top: 0.5rem; }
+        .contact-info { margin-top: 1rem; font-size: 0.95rem; color: var(--secondary); }
 
         .links { margin-top: 1.5rem; }
         .links a {
-            margin: 0 12px;
-            color: var(--accent);
+            margin: 0 10px;
+            color: var(--primary);
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.2s;
+            border: 1px solid var(--primary);
+            padding: 5px 15px;
+            border-radius: 20px;
+            transition: 0.3s;
         }
-        .links a:hover { color: var(--primary); }
+        .links a:hover { background: var(--primary); color: white; }
 
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; }
 
         section {
-            background: white;
+            background: var(--card);
             padding: 2.5rem;
             border-radius: 12px;
             margin-bottom: 2rem;
-            border: 1px solid #e2e8f0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         h2 {
             color: var(--dark);
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            margin-top: 0;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
             margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-        }
-        h2::after {
-            content: "";
-            flex: 1;
-            height: 1px;
-            background: #e2e8f0;
-            margin-left: 1rem;
         }
 
         .item { margin-bottom: 2rem; }
@@ -88,33 +80,31 @@
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
         }
-        .title { font-weight: 700; color: var(--dark); font-size: 1.1rem; }
-        .date { color: var(--accent); font-size: 0.9rem; }
+        .item-title { font-weight: 700; color: var(--dark); font-size: 1.1rem; }
+        .item-date { color: var(--secondary); font-size: 0.9rem; font-weight: 500; }
         
-        ul { padding-left: 1.2rem; margin-top: 0.5rem; }
-        li { margin-bottom: 0.5rem; }
+        ul { padding-left: 1.2rem; margin-top: 0.8rem; }
+        li { margin-bottom: 0.6rem; }
 
-        .award-badge {
-            background: #fef3c7;
+        .skills-container { display: flex; flex-direction: column; gap: 10px; }
+        .skill-category { font-weight: bold; color: var(--dark); }
+
+        .award-banner {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
             color: #92400e;
-            padding: 1rem;
-            border-radius: 8px;
-            border: 1px solid #fde68a;
-            margin-bottom: 1.5rem;
+            padding: 1.2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: 600;
         }
 
-        footer {
-            text-align: center;
-            padding: 4rem 1rem;
-            color: var(--accent);
-            font-size: 0.9rem;
-        }
+        footer { text-align: center; padding: 3rem; color: var(--secondary); font-size: 0.9rem; }
 
         @media (max-width: 600px) {
             .item-header { flex-direction: column; }
-            .date { margin-top: 0.25rem; }
         }
     </style>
 </head>
@@ -123,88 +113,128 @@
     <header>
         <img src="profile.jpg" alt="Min Young Park" class="profile-img">
         <h1>Min Young Park</h1>
-        <div class="subtitle">Computer Science Student @ Rose-Hulman</div>
+        <div class="subtitle">Computer Science Student @ Rose-Hulman Institute of Technology</div>
+        <div class="contact-info">
+            Terre Haute, IN • (331) 255-7271 • <a href="mailto:minyoungpark5321@gmail.com" style="color: inherit; text-decoration: none;">minyoungpark5321@gmail.com</a>
+        </div>
         <div class="links">
-            <a href="mailto:minyoungpark5321@gmail.com">Email</a>
-            <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/YOUR_LINKEDIN_HERE" target="_blank">LinkedIn</a>
             <a href="#">GitHub</a>
         </div>
     </header>
 
     <div class="container">
         
-        <div class="award-badge">
-            <strong>🏆 Achievement Highlight:</strong> Earned over 55 awards in programming competitions (2018–2022) and 1st Runner Up in the HS Web Programming Contest.
+        <div class="award-banner">
+            🏆 Winner of 55+ Programming Awards & National Young Innovators Silver Medalist
         </div>
 
-        <section id="experience">
-            <h2>Experience</h2>
+        <section id="education">
+            <h2>Education</h2>
             <div class="item">
                 <div class="item-header">
-                    <span class="title">Genesys — Software Developer Intern</span>
-                    <span class="date">June 2025 – Present</span>
+                    <span class="item-title">Rose-Hulman Institute of Technology</span>
+                    <span class="item-date">Expected May 2027</span>
+                </div>
+                <div>B.S. in Computer Science | GPA: 3.50</div>
+                <p><small><strong>Relevant Coursework:</strong> Computer Science I, II (C, C++), Computer Science (Java), Intro to Digital Systems, Data Structures and Algorithms, Computer Architecture I & II, Database Systems, Intro to Web Programming, Operating Systems.</small></p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Genesys — Software Developer Intern</span>
+                    <span class="item-date">June 2025 – Present</span>
                 </div>
                 <ul>
-                    <li>Building CMS features and multi-part S3 uploads using AWS, Go, and React.</li>
-                    <li>Resolving complex Slate Editor issues and collaborating with senior engineers.</li>
+                    <li>Engineered critical CMS features (user mentions, editable/inline comments with diff) and built multi-part S3 uploads & pre-signed URL downloads using AWS, Go, TypeScript, and React, improving file handling efficiency and backend-frontend integration.</li>
+                    <li>Debugged and resolved complex Slate Editor issues, collaborating with senior engineers and taking full ownership of challenging tickets, ensuring stable releases and high-quality deliverables.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Atom Tech Solutions — Software Engineer Intern</span>
+                    <span class="item-date">June 2024 – Aug 2024</span>
+                </div>
+                <ul>
+                    <li>Contributed to web and mobile application development projects at Atom Tech Solutions, applying Agile methodology and utilizing technologies such as JavaScript, Express.js, MongoDB, and Bootstrap, while receiving regular feedback from the coordinator on my progress.</li>
                 </ul>
             </div>
         </section>
 
-        <section id="extracurricular">
-            <h2>Leadership & Activities</h2>
-            <div class="item">
-                <div class="item-header">
-                    <span class="title">Engineering Club — President</span>
-                    <span class="date">2023 – 2024</span>
-                </div>
-                <ul>
-                    <li>Doubled club membership within one month.</li>
-                    <li>Hosted weekly Arduino workshops using TinkerCAD to foster creative thinking.</li>
-                </ul>
-            </div>
-
-            <div class="item">
-                <div class="item-header">
-                    <span class="title">Student Government — Senator</span>
-                    <span class="date">2023 – 2024</span>
-                </div>
-                <ul>
-                    <li>Contributed to policy discussions and addressed student hygiene/campus needs.</li>
-                </ul>
-            </div>
-
-            <div class="item">
-                <div class="item-header">
-                    <span class="title">Makers Club — Vice Secretary</span>
-                    <span class="date">2021</span>
-                </div>
-                <ul>
-                    <li>Led 6 different groups by teaching programming skills and presented STEM projects to state representatives.</li>
-                </ul>
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div><span class="skill-category">Programming Languages:</span> Go, TypeScript, React, Python, Django, Java, C++, CSS, JavaScript, Arduino Uno</div>
+                <div><span class="skill-category">Frameworks / Tools:</span> AWS Solutions Architect, Jenkins, BitBucket, Jira, Flutter, Firebase, Android Studio, MySQL, Git</div>
+                <div><span class="skill-category">Achievements:</span> HS Web Programming Contest (1st Runner Up); National Young Innovators Challenge (Silver) Certificate</div>
             </div>
         </section>
 
         <section id="projects">
             <h2>Academic Projects</h2>
             <div class="item">
+                <div class="item-header"><span class="item-title">An Insurance SurvAIyor (LLM, BLIP-1, AWS)</span></div>
+                <ul>
+                    <li>Implemented BLIP-1 visual questioning and answering model; trained it on numerous images, gained 2D datasets for regression statistics model; used LLM to generate 3 key insights and reported potential house damage.</li>
+                </ul>
+            </div>
+            <div class="item">
+                <div class="item-header"><span class="item-title">IlliniNoot (Django, SQLite, Google Maps API)</span></div>
+                <ul>
+                    <li>Created a comprehensive hub using Django Web Framework for users to explore study spots and filter based on criteria at UIUC HackIllinois 2024.</li>
+                </ul>
+            </div>
+            <div class="item">
+                <div class="item-header"><span class="item-title">Smart Defroster (Raspberry Pi, Flutter, Firebase)</span></div>
+                <ul>
+                    <li>Developed a mobile application that remotely controls a defroster, connected hardware components to the application through Bluetooth and WiFi module. Engineered a remote-controlled defroster system, reducing defrosting time food via a mobile app.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="extracurricular">
+            <h2>Extracurricular Activities</h2>
+            <div class="item">
                 <div class="item-header">
-                    <span class="title">An Insurance SurvAIyor (LLM & AWS)</span>
+                    <span class="item-title">Engineering Club – President</span>
+                    <span class="item-date">Aug 2023 – Aug 2024</span>
                 </div>
-                <p>Implemented BLIP-1 visual VQA models to analyze house damage and generate regression statistics.</p>
+                <ul>
+                    <li>Doubled the club's membership within a month, reactivating a previously inactive organization.</li>
+                    <li>Hosted weekly Arduino Workshops using TinkerCAD, leading members with creative thinking and analysis.</li>
+                    <li>Provided materials for members to build the fastest cart applying physics theory learned in class.</li>
+                </ul>
             </div>
             <div class="item">
                 <div class="item-header">
-                    <span class="title">Smart Defroster (IoT)</span>
+                    <span class="item-title">Student Government – Senator</span>
+                    <span class="item-date">Oct 2023 – Apr 2024</span>
                 </div>
-                <p>Built a Raspberry Pi & Flutter mobile app to remotely control hardware via Bluetooth/WiFi.</p>
+                <ul>
+                    <li>Participated in various committees and addressed student needs on campus activities.</li>
+                    <li>Set up sanitizing products by donation to promote hygiene, resulting in better hygiene awareness.</li>
+                </ul>
+            </div>
+            <div class="item">
+                <div class="item-header">
+                    <span class="item-title">Makers Club – Vice Secretary</span>
+                    <span class="item-date">2021 – Dec 2021</span>
+                </div>
+                <ul>
+                    <li>Achieved 55 awards from state-level to international programming competitions from 2018 to 2022.</li>
+                    <li>Volunteered and presented the STEM project to a state government representative during the STEM 4.0 Showcase.</li>
+                </ul>
             </div>
         </section>
 
     </div>
 
     <footer>
-        <p>Built by Min Young Park &copy; 2025</p>
+        <p>&copy; 2025 Min Young Park | Built with HTML & CSS</p>
     </footer>
 
 </body>
